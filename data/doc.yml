@@ -1,0 +1,21 @@
+menu:
+  en:
+    - title: File Preparation
+      url: /en/doc/mengine/file-preparation
+    - title: User Guide
+      url: /en/doc/user-guide
+    - title: Integration Guide
+      url: /en/doc/mengine/integration-guide
+    - title: Supported Functions
+      url: /en/doc/supported-functions
+
+  ru:
+    - title: Подготовка файла
+      url: /ru/doc/mengine/file-preparation
+    - title: Административный интерфейс
+      url: /ru/doc/user-guide
+    - title: Руководство по интеграции
+      url: /ru/doc/mengine/integration-guide
+    - title: Поддерживаемые функции
+      url: /ru/doc/supported-functions
+

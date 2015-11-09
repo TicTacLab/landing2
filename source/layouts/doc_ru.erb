@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title><%= current_page.data.title || "BetEngines" %></title>
+  
+  <%= stylesheet_link_tag "bootstrap", "doc", "font-awesome/css/font-awesome.min" %>
+
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/ru">BetEngines</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <% data.doc.menu.ru.each do |item| %>
+              <li class="<%= if item.url == current_page.url.chomp("/") then "active" end %>">
+                <a href="<%= item.url %>"><%= item.title %></a>
+              </li>
+            <% end %>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="pull-right" href="<%= current_page.url.sub! '/ru/', '/en/' %>">EN</a></li>
+          </ul>
+          </div>
+        </div> 
+      </nav> 
+
+      <section id="contact">
+        <div class="banner">
+          <div class="container">
+            <%= yield %>    
+          </div>
+        </div>  
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="copyright text-muted small">Есть вопросы? <a href="mailto:support@betengines.com"> support@betengines.com</a> <span class="pull-right">Copyright &copy; <a href="/ru">BetEngines</a> All Rights Reserved</span></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
