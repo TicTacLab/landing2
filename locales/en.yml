@@ -1,0 +1,20 @@
+---
+en:
+  menu:
+    products: Products
+    features: Features
+    consulting: Consulting
+    howitworks: How it works
+    customers: Customers
+    contacts: Request
+
+  footer:
+    home: Request for Demo
+    demo: Запрос Демо версии
+
+  contact:
+    demo: Request for Demo
+    description: >
+      Prices are available upon request. 
+      Please note that we are currently providing a free of charge test account for our service. 
+      For more information, or to activate a trial account special deals, please do not hesitate to contact us at any time.

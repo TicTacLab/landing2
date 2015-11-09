@@ -54,8 +54,11 @@ set :images_dir, 'images'
 page "/en/doc/*", :layout => "doc_en"
 page "/ru/doc/*", :layout => "doc_ru"
 
+activate :i18n
+
 # some/page.html -> some/page/index.html, so url will be /some/page
 activate :directory_indexes
+
 
 # Build-specific configuration
 configure :build do
