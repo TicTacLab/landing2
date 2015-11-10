@@ -1,0 +1,45 @@
+<section id="features">
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <br/><br/>
+      <h1 class="header"><%= t 'features.header' %></h1>
+      <br/>
+    </div>
+  </div>
+  <% t('features.list').each_with_index do |feature, index| %>
+    <% if index.even? %>
+      <div class="content-section-a">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-sm-6">
+              <hr class="section-heading-spacer">
+              <div class="clearfix"></div>
+              <h2 class="section-heading"><%= feature[:title] %></h2>
+              <div class="lead"><%= feature[:description] %></div>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+              <img class="img-responsive" src="/images/<%= feature[:img] %>" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="content-section-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+              <hr class="section-heading-spacer">
+              <div class="clearfix"></div>
+              <h2 class="section-heading"><%= feature[:title] %></h2>
+              <div class="lead"><%= feature[:description] %></div>
+            </div>
+            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+              <img class="img-responsive" src="/images/<%= feature[:img] %>" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+<% end %>
+</section>

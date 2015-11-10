@@ -1,0 +1,40 @@
+---
+en:
+  howitworks:
+    header:
+    list: []
+
+ru:
+  howitworks:
+    header: Как это работает?
+    list:
+    - 
+      title: Подготовка
+      img: howitworks/prepare.png
+      description: >
+        Подготовьте Вашу модель используя Microsoft Excel.
+        Всего несколько дополнительных вкладок, 
+        и сервисы будут готовы к ведению спортивных событий 
+        по Вашим математическим алгоритмам с помощью MathEngine 
+        или расчетам ставок с помощью Settlement Engine
+    - 
+      title: Подключайте новые файлы
+      img: howitworks/upload.png
+      description: >
+        Загружайте новые Excel файлы всего за несколько минут. 
+        Обновляйте уже загруженные файлы прямо на лету
+    - 
+      title: Управляйте Вашими данными
+      img: howitworks/manage.png
+      description: >
+        Воспользуйтесь Административным интерфейсом BetEngines для управления файлами и пользователями
+    - 
+      title: Тестируйте и профилируйте
+      img: howitworks/test-and-profile.png
+      description: >
+        После загрузки файла Вы можете проверить корректность его работы, а также измерить скорость расчета
+    - 
+      title: Используйте
+      img: howitworks/transparent.gif
+      description: >
+        Теперь Ваши Excel файлы работают как сервисы и доступны Вашей системе через BetEngines REST API

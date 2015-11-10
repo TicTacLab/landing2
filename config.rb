@@ -50,6 +50,7 @@
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :partials_dir, 'partials'
 
 page "/en/doc/*", :layout => "doc_en"
 page "/ru/doc/*", :layout => "doc_ru"

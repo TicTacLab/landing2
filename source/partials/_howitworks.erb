@@ -1,0 +1,30 @@
+<section id="howitworks"   style="position: relative" class="here">
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 text-center">
+    <br/>
+    <br/>
+    <h1><%= t 'howitworks.header' %></h1>
+    <br/>
+  </div>
+</div>
+<% t('howitworks.list').each do |how| %>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div style="background: white; box-shadow: 0px 0px 9px 10px rgba(255,255,255,1);">
+            <h2 class="section-heading text-center"><%= how[:title] %></h2>
+          </div>
+          <div class="lead text-center"  style="background: white; box-shadow: 0px 0px 9px 10px rgba(255,255,255,1);"><%= how[:description] %></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <img class="img-responsive center-block" src="/images/<%= how[:img] %>" style="background: white; box-shadow: 0px 0px 9px 10px rgba(255,255,255,1); margin-top: 10px; margin-bottom: 10px">
+        </div>
+      </div>      
+    </div>
+  </div>
+<% end %>
+<hr style="background: white; box-shadow: 0px 0px 1px 15px rgba(255,255,255,1);">
+</section>

@@ -1,0 +1,36 @@
+---
+en:
+  customers:
+    header:
+    list: []
+
+ru:
+  customers:
+    header: Клиенты
+    list:
+    -
+      url: http://favbet.com
+      img: favbet.png
+      who: Favbet Founder A. Matiukha
+      what: >
+        Мы более 2х лет используем продукты BetEngines.
+        Это позволило нам в разы ускорить внедрение наших математических моделей для всех видов спорта.
+        Наш бизнес растет благодаря BetEngines.
+    -
+      url: http://www.favoritsport.com.ua
+      img: favorit.png
+      who: CIO FavroritSport K. Babichenko
+      what: >
+        Благодаря BetEngines, мы значительно освободили ресурсы R&D департамента,
+        сократив расходы на внедрение и обслуживание наших "роботов".
+    -
+      url: http://www.betinvest.com
+      img: betinvest.png
+      who: Head of sales S. Spirov
+      what: >
+        Наш годичный опыт использования продуктов BetEngines был очень положительным.
+        Эта компания своевременно и успешно выполняет свои обязанности.
+        Мы без колебаний рекомендуем BetEngines как очень надежного партнера.
+    -
+      url: '#contact'
+      img: your-logo-here.png
