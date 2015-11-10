@@ -1,8 +1,33 @@
 ---
 en:
   howitworks:
-    header:
-    list: []
+    header: How they works
+    list:
+    - 
+      title: Prepare
+      img: howitworks/prepare.png
+      description: >    
+        Prepare your model using Microsoft Excel
+    - 
+      title: Upload
+      img: howitworks/upload.png
+      description: > 
+        Simply upload your model to our service and assign an id to it, so that your developers will have easy access
+    - 
+      title: Manage
+      img: howitworks/manage.png
+      description: > 
+        Manage your files and users via Web interface 
+    - 
+      title: 'Test & Profile'
+      img: howitworks/test-and-profile.png
+      description: > 
+        After you have uploaded your model you can test and profile it on your dedicated engine
+    - 
+      title: Use
+      img: howitworks/transparent.gif
+      description: > 
+        Your model will be accessible to your company programmers via BetEngines REST and to your model, developers via Web interface
 
 ru:
   howitworks:

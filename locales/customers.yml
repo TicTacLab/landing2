@@ -1,8 +1,35 @@
 ---
 en:
   customers:
-    header:
-    list: []
+    header: Клиенты
+    list:
+    -
+      url: http://favbet.com
+      img: favbet.png
+      who: Favbet Founder A. Matiukha
+      what: >
+        <p>We have been using BetEngines for more than two years in a production environment. </p>
+        <p>It has helped us reduce the time costs of all our sports model integration. 
+        Our business is growing thanks to BetEngines. We are using BetEngines more then 2 years in production environment.
+        It helped us reduce time cost of all our sports model integration.</p>
+        <p>Our business grows thanks to BetEngines</p>
+    -
+      url: http://www.favoritsport.com.ua
+      img: favorit.png
+      who: CIO FavroritSport K. Babichenko
+      what: >
+        <p>Thanks to BetEngines we have released R & D resources by reducing the costs of "robots" integration.</p>
+    -
+      url: http://www.betinvest.com
+      img: betinvest.png
+      who: Head of sales S. Spirov
+      what: >
+        <p>All of our experience during our one-year association with BetEngines has been very positive, 
+        and to our knowledge this company has a history of timely and successful completion of its jobs.</p>
+        <p>We have no hesitation in recommending BetEngines as a highly reliable partner.</p>
+    -
+      url: '#contact'
+      img: your-logo-here.png
 
 ru:
   customers:
@@ -13,24 +40,24 @@ ru:
       img: favbet.png
       who: Favbet Founder A. Matiukha
       what: >
-        Мы более 2х лет используем продукты BetEngines.
-        Это позволило нам в разы ускорить внедрение наших математических моделей для всех видов спорта.
-        Наш бизнес растет благодаря BetEngines.
+        <p>Мы более 2х лет используем продукты BetEngines.</p>
+        <p>Это позволило нам в разы ускорить внедрение наших математических моделей для всех видов спорта.</p>
+        <p>Наш бизнес растет благодаря BetEngines.</p>
     -
       url: http://www.favoritsport.com.ua
       img: favorit.png
       who: CIO FavroritSport K. Babichenko
       what: >
-        Благодаря BetEngines, мы значительно освободили ресурсы R&D департамента,
-        сократив расходы на внедрение и обслуживание наших "роботов".
+        <p>Благодаря BetEngines, мы значительно освободили ресурсы R&D департамента,
+        сократив расходы на внедрение и обслуживание наших "роботов".</p>
     -
       url: http://www.betinvest.com
       img: betinvest.png
       who: Head of sales S. Spirov
       what: >
-        Наш годичный опыт использования продуктов BetEngines был очень положительным.
-        Эта компания своевременно и успешно выполняет свои обязанности.
-        Мы без колебаний рекомендуем BetEngines как очень надежного партнера.
+        <p>Наш годичный опыт использования продуктов BetEngines был очень положительным.
+        Эта компания своевременно и успешно выполняет свои обязанности.</p>
+        <p>Мы без колебаний рекомендуем BetEngines как очень надежного партнера.</p>
     -
       url: '#contact'
       img: your-logo-here.png

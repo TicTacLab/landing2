@@ -1,15 +1,32 @@
 ---
 en:
   products:
-    header:
-    list: []
+    header: Products
+    list:
+      -
+        title: Math Engine
+        img: products/math_engine.jpg
+        description: >
+          <i>Math Engine</i> 
+          <p>This platform performs calculations for sporting events using statistical algorithms.</p>  
+          <p>Think only about the quality of your formulas in the simplicity of the Excel environment.</p>
+          <p>Math Engine does the rest, making your Excel spreadsheets readable to programming languages.</p>
+      -
+        title: Settlement Engine
+        img: products/s_engine.jpg
+        description: >
+          <i>Settlement Engine</i> 
+          <p>A system for settling bets</p>
+          <p>Now the complexity of outcomes of, and thus the betting options of your customers, is limited only by your imagination.</p>
+          <p>Simply create the rules using Excel spreadsheets, and upload them into the settlement engine.</p>     
+          <p>Your customers' bets will be settled quickly and accurately.</p>
 
 ru:
   products:
     header: Продукты
     list:
     - 
-      title: MathEngine
+      title: Math Engine
       img: products/math_engine.jpg
       description: >
         <p><i>MathEngine</i> - эта платформа предназначена для проведения спортивных событий по статистическим алгоритмам.</p>

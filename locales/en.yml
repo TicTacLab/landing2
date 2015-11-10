@@ -1,20 +1,33 @@
 ---
-en:
-  menu:
-    products: Products
-    features: Features
-    consulting: Consulting
-    howitworks: How it works
-    customers: Customers
-    contacts: Request
+  en:
+    menu:
+      brand_url: '/'
+      products: Products
+      features: Features
+      consulting: Consulting
+      howitworks: How it works
+      customers: Customers
+      contacts: Request
 
-  footer:
-    home: Request for Demo
-    demo: Запрос Демо версии
+    language:
+      title: RU
+      url: /ru      
 
-  contact:
-    demo: Request for Demo
-    description: >
-      Prices are available upon request. 
-      Please note that we are currently providing a free of charge test account for our service. 
-      For more information, or to activate a trial account special deals, please do not hesitate to contact us at any time.
+    footer:
+      home: Home
+      demo: Request for Demo
+
+    contact:
+      demo: Request for Demo
+      description: >
+        Prices are available upon request. 
+        Please note that we are currently providing a free of charge test account for our service. 
+        For more information, or to activate a trial account special deals, please do not hesitate to contact us at any time.
+
+    consulting:
+      header: Consulting
+      img: consulting.png
+      description: >
+        <p>For more than five years, our experts have been developing systems for betting agencies.</p> 
+        <p>We have unique experience building flexible platforms for the betting industry.</p>
+        <p>Working with us, you will avoid the major problems which come with the construction of new systems and the upgrading of existing systems.</p>
