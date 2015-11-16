@@ -1,7 +1,7 @@
 ---
 en:
   howitworks:
-    header: How they works
+    header: How they work
     list:
     - 
       title: Prepare
@@ -27,7 +27,7 @@ en:
       title: Use
       img: howitworks/transparent.gif
       description: > 
-        Your model will be accessible to your company programmers via BetEngines REST and to your model, developers via Web interface
+        Your model will be accessible to your company programmers via BetEngines REST and to your model developers via Web interface 
 
 ru:
   howitworks:
