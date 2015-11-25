@@ -29,7 +29,7 @@ title: Settlement Engine. Подготовка файла
 
 ### Пример вкладки "EventType"
 
-![EventType](/img/s-engine/EventType.png)
+![EventType](/images/event-type-sengine.png)
 
 ## Подготовка вкладки "EventLog"
 
@@ -39,7 +39,7 @@ title: Settlement Engine. Подготовка файла
 
 После загрузки файла в *SEngine*, эта вкладка будет автоматически очищенна.
 
-![EventLog](/img/s-engine/EventLog.png)
+![EventLog](/images/event-log-sengine.png)
 
 ## Подготовка вкладки "MarketTemplates"
 
@@ -51,7 +51,7 @@ title: Settlement Engine. Подготовка файла
  
 *Пример вкладки "MarketTemplates"*
 
-![EventLog](/img/s-engine/MarketTemplates.png)
+![EventLog](/images/market-templates-sengine.png)
 
 ## Подготовка вкладки "OUT"
 
@@ -59,7 +59,7 @@ title: Settlement Engine. Подготовка файла
 
 *Пример вкладки "OUT"*
 
-![EventLog](/img/s-engine/SEngineOUT.png)
+![EventLog](/images/out-sengine.png)
 
 ## Следущие шаги
 
