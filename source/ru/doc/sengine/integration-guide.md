@@ -80,6 +80,8 @@ title: SettlementEngine. Руководство по интеграции.
 
 * file-id - обязательно, integer, ID Excel файла по которому будет проводится событие
 * event-id - обязательно, string, ID события которое будет проводиться
+* description - обязательно, string, строковое описание события
+* filters - опционально, hashmap, название столбцов и список значений столбцов которые должны остаться при пролучении расчета
 
 **Request body**
 
@@ -88,6 +90,10 @@ title: SettlementEngine. Руководство по интеграции.
   "params": {
     "file-id": 12,
     "event-id": "550e8400-e29b-41d4-a716-446655440000"
+    "description": "Soccer Dinamo-Kiev"
+    "filters" : {
+      "Market name" : [ "MATCH_BETTING", "MATCH_DRAW_NO_BET" ]
+    }
   }
 }
 ~~~
@@ -111,47 +117,6 @@ curl -X POST -d <<json-request-body>> http://settlement.engine/events
 ~~~
 response data field will be null
 ~~~
-
-### Method: EVENT-SET-OUT
-
-**POST /events/:event-id/out/set**
-
-???
-
-**Parameters**
-
-* event-id - обязательно, string, ID события которое будет проводиться
-* filters - обязательно, hashmap, фильтры???
-
-**Request body**
-
-~~~ json
-{
-  "params" : {
-    "filters" : {
-      "Market name" : [ "MATCH_BETTING", "MATCH_DRAW_NO_BET" ]
-    }
-  }
-}
-~~~
-
-**Responses**
-
-* 200 - успешное выполнение операции
-* 400 "MFP" - если event-id или фильтры неверного формата
-* 404 "ENF" - если событие не существует
-
-**Request example** <a href="#curl">*<a/>
-
-~~~
-curl -X POST -d <<json-request-body>> http://settlement.engine/events/550e8400-e29b-41d4-a716-446655440000/out/set
-~~~
-
-**Response 200 data example**
-
-~~~
-response data field will be null
-~~~ 
 
 ### Method: FINALIZE-EVENT
 
