@@ -1,5 +1,6 @@
 ---
 title: SettlementEngine. Руководство по интеграции. 
+no_translation: true
 ---
 ## SettlementEngine
 

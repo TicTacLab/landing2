@@ -1,5 +1,6 @@
 ---
 title: Settlement Engine. Подготовка файла
+no_translation: true
 ---
 
 ## Settlement Engine

@@ -11,11 +11,19 @@ menu:
 
   ru:
     - title: Подготовка файла
-      url: /ru/doc/mengine/file-preparation
+      items: 
+        - title: MathEngine 
+          url: /ru/doc/mengine/file-preparation
+        - title: SettlementEngine
+          url: /ru/doc/sengine/file-preparation
     - title: Административный интерфейс
       url: /ru/doc/user-guide
     - title: Руководство по интеграции
-      url: /ru/doc/mengine/integration-guide
+      items:
+        - title: MathEngine
+          url: /ru/doc/mengine/integration-guide
+        - title: SettlementEngine
+          url: /ru/doc/sengine/integration-guide
     - title: Поддерживаемые функции
       url: /ru/doc/supported-functions
 
