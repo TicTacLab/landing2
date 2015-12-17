@@ -1,44 +1,45 @@
 <section id="products">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <br/><br/>
-      <h1 class="header"><%= t 'products.header' %></h1>
-      <br/>
-    </div>
+  <div>
+    <br/><br/>
+
+    <h1 class="header"><%= t 'products.header' %></h1>
+    <br/>
   </div>
   <% t('products.list').each_with_index do |product, index| %>
-    <% if index.even? %>
-      <div class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-sm-6">
-              <hr class="section-heading-spacer">
-              <div class="clearfix"></div>
-              <h2 class="section-heading"><%= product[:title] %></h2>
-              <div class="lead"><%= product[:description] %></div>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-              <img class="img-responsive" src="/images/<%= product[:img] %>" alt="">
-            </div>
-          </div>
+  <% if index.even? %>
+  <div class="content-section-a">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading"><%= product[:title] %></h2>
+
+          <div class="lead"><%= product[:description] %></div>
+        </div>
+        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+          <img class="img-responsive" src="/images/<%= product[:img] %>" alt="">
         </div>
       </div>
-    <% else %>
-      <div class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-              <hr class="section-heading-spacer">
-              <div class="clearfix"></div>
-              <h2 class="section-heading"><%= product[:title] %></h2>
-              <div class="lead"><%= product[:description] %></div>
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-              <img class="img-responsive" src="/images/<%= product[:img] %>" alt="">
-            </div>
-          </div>
+    </div>
+  </div>
+  <% else %>
+  <div class="content-section-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading"><%= product[:title] %></h2>
+
+          <div class="lead"><%= product[:description] %></div>
+        </div>
+        <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+          <img class="img-responsive" src="/images/<%= product[:img] %>" alt="">
         </div>
       </div>
-    <% end %>
+    </div>
+  </div>
+  <% end %>
   <% end %>
 </section>

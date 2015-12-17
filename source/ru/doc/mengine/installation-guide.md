@@ -52,7 +52,7 @@ Cassandra. Проделывать эту операцию на других ко
 
 ```
   $ cqlsh -u <пользователь> -p <пароль> -f keyspace.cql <ip адрес cassandra>
-  $ cqlsh -u <пользователь> -p <пароль> -f schema.cql <ip адрес cassandra>
+  $ cqlsh -u <пользователь> -p <пароль> -k malt -f schema.cql <ip адрес cassandra>
 ```
   
 ## Установка MathEngine

@@ -1,7 +1,7 @@
 ---
 en:
   customers:
-    header: Клиенты
+    header: Customers
     list:
     -
       url: http://favbet.com

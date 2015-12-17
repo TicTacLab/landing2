@@ -195,11 +195,13 @@ p.copyright {
    width: 100px;
 }
 
+.white-plate {
+   background-color: rgba(255, 255, 255, 0.7);
+}
+
 .products {
-   width: 600px;
    margin: auto;
    padding-bottom: 50px;
-   background-color: rgba(255, 255, 255, 0.7);
    padding-top: 50px;
 }
 
@@ -210,15 +212,16 @@ p.copyright {
    font-weight: 900;
 }
 
-.products .products-names td {
+.products .product-name {
    padding-top: 15px;
 }
 
-.products .products-names a {
+.products .product-name a {
    color: inherit;
+   font-family: sans-serif;
 }
 
-.products .products-names a:hover {
+.products .product-name a:hover {
    text-decoration: none;
    color: inherit;
 }
