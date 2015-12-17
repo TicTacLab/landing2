@@ -1,10 +1,13 @@
 ---
-title: SettlementEngine. Подготовка файла
+title: Settlement Engine. Подготовка файла
+no_translation: true
 ---
 
 ## Settlement Engine
 
-# Факты о событиях в матче
+# Подготовка файла 
+
+## Факты о событиях в матче
 
 Для расчета маркетов *Settlement Engine* использует журнал *событий* которые происходят по ходу матча. 
 
@@ -21,13 +24,13 @@ title: SettlementEngine. Подготовка файла
 
 Вкладка должна содержать таблицу из 3х колонок:
 
-* EventType // Название События
-* Attribute // Название Факта
-* Value     // Возможное значение Факта
+* EventType - Название События
+* Attribute - Название Факта
+* Value     - Возможное значение Факта
 
 ### Пример вкладки "EventType"
 
-![EventType](/img/s-engine/EventType.png)
+![EventType](/images/event-type-sengine.png)
 
 ## Подготовка вкладки "EventLog"
 
@@ -37,11 +40,31 @@ title: SettlementEngine. Подготовка файла
 
 После загрузки файла в *SEngine*, эта вкладка будет автоматически очищенна.
 
-![EventLog](/img/s-engine/EventLog.png)
+![EventLog](/images/event-log-sengine.png)
+
+## Подготовка вкладки "MarketTemplates"
+
+Данная вкладка необходима для настройки валидации поступающих сообщений для "EventLog".
+
+Первая колонка должна содержать значения из колонки *Market_type_name* из вкладки *OUT*. Остальные колонки заполняются названиями *EventType* из вкладки *EventType*. 
+
+Значения ячеек на пересечении - это те *Attributes*, которые необходимы для расчета данного шаблона маркета.
+ 
+*Пример вкладки "MarketTemplates"*
+
+![EventLog](/images/market-templates-sengine.png)
+
+## Подготовка вкладки "OUT"
+
+Данная вкладка содержит результат расчета исходов. Может быть заполненна в произвольном порядке. Обязательным является наличие колонки "Market_type_name"
+
+*Пример вкладки "OUT"*
+
+![EventLog](/images/out-sengine.png)
 
 ## Следущие шаги
 
-Теперь Вы можете приступать к генерации сервисов с помощью [BetEngines Administration Interface](/ru/user-guide/).
+Теперь Вы можете приступать к генерации сервисов с помощью [BetEngines Administration Interface](/ru/doc/user-guide/).
 
 <div class="well well-sm">
 <b>Важно!</b> Все используемые ячейки во вкладках ""  должны содержать значение. Не используемые ячейки должны быть очищены. Для очистки ячеек выберите Вкладка Главная -> Секция Редактирование -> Очистить -> Очистить Все (Alt+Я+8+Ч).

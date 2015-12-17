@@ -9,54 +9,70 @@
   <title><%= current_page.data.title || "BetEngines" %></title>
   
   <%= stylesheet_link_tag "bootstrap", "doc", "font-awesome/css/font-awesome.min" %>
+  <%= javascript_include_tag 'jquery', 'jquery.easing.min', 'bootstrap.min', 'google-analytics' %>
   <link href="/images/favicon.ico" rel="shortcut icon">
   <link href="/images/favicon.png" rel="shortcut icon">
   
   </head>
   <body>
 
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/ru">BetEngines</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <% data.doc.menu.ru.each do |item| %>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/ru">BetEngines</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <% data.doc.menu.ru.each do |item| %>
+            <% if item.items %>
+              <li class="<%= if item.items.any? {|i| i[:url] == current_page.url.chomp("/")} then "dropdown active" else "dropdown" end %>">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><%= item.title %><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <% item.items.each do |subitem| %>
+                    <li class="<%= if subitem.url == current_page.url.chomp("/") then "active" end %>">
+                      <a href="<%= subitem.url %>"><%= subitem.title %></a>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>   
+            <% else %>
               <li class="<%= if item.url == current_page.url.chomp("/") then "active" end %>">
                 <a href="<%= item.url %>"><%= item.title %></a>
               </li>
             <% end %>
-          </ul>
+          <% end %>
+        </ul>
+        <% unless current_page.data.no_translation %>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="pull-right" href="<%= current_page.url.sub! '/ru/', '/en/' %>">EN</a></li>
           </ul>
-          </div>
-        </div> 
-      </nav> 
+        <% end %>
+      </div>
+    </div> 
+    </nav> 
 
-      <section id="contact">
-        <div class="banner">
-          <div class="container">
-            <%= yield %>    
-          </div>
-        </div>  
-      </section>
+    <section id="contact">
+    <div class="banner">
+      <div class="container">
+      <%= yield %>  
+      </div>
+    </div>  
+    </section>
 
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="copyright text-muted small">Есть вопросы? <a href="mailto:support@betengines.com"> support@betengines.com</a> <span class="pull-right">Copyright &copy; <a href="/ru">BetEngines</a> All Rights Reserved</span></p>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <footer>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+        <p class="copyright text-muted small">Есть вопросы? <a href="mailto:d.omelechko@betengines.com">d.omelechko@betengines.com</a> <span class="pull-right">Copyright &copy; <a href="/ru">BetEngines</a> All Rights Reserved</span></p>
+      </div>
+      </div>
+    </div>
+    </footer>
   </body>
 </html>
