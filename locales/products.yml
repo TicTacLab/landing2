@@ -5,7 +5,7 @@ en:
     list:
       -
         title: Math Engine
-        img: products/math_engine.jpg
+        img: products/math_engine2.jpg
         description: >
           <i>Math Engine</i> 
           <p>This platform performs calculations for sporting events using statistical algorithms.</p>  
@@ -13,7 +13,7 @@ en:
           <p>Math Engine does the rest, making your Excel spreadsheets readable to programming languages.</p>
       -
         title: Settlement Engine
-        img: products/s_engine.jpg
+        img: products/s_engine5.jpg
         description: >
           <i>Settlement Engine</i> 
           <p>A system for settling bets</p>

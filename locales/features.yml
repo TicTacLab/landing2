@@ -5,28 +5,28 @@ en:
     list:
     - 
       title: Use well-known tools
-      img: features/tools1.jpg
+      img: features/tools2.jpg
       description: >
         Microsoft Excel is a proven industry spreadsheet standard. It provides a mathematical toolkit in a straightforward format.
     -
       title: Just Plug and Play
-      img: features/pnp.jpg
+      img: features/tool3.jpg
       description: >
         It's easy to express your ideas in Excel files and upload them to <i>BetEngines</i>. We guarantee that they will work as you expect.
     -
       title: Ready for highload
-      img: features/storm1.jpg
+      img: features/storm2.jpg
       description: >
         <i>BetEngines</i> is designed for high-throughput and high-speed requirements. 
         It accommodates massive simultaneous user interactions using modern cloud-based technologies.
     -
       title: With security in mind
-      img: features/security1.jpg
+      img: features/security2.jpg
       description: >
         Security is of the highest priority with BetEngines. <i>BetEngines</i> is designed to ensure user data security and integrity.
     -
       title: Reliable
-      img: features/reliable.jpg
+      img: features/reliable2.jpg
       description: >      
         <i>BetEngines</i> meets the high reliability demands of your business. 
         We have proven our durability and reliability in our partners' high-load production environments for the last two years.
