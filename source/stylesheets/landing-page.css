@@ -239,3 +239,9 @@ p.copyright {
 section h1.header {
    text-align: center;
 }
+
+.equal, .equal > div[class*='col-'] {  
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}

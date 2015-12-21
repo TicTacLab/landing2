@@ -3,6 +3,7 @@
     menu:
       brand_url: '/'
       products: Products
+      prices: Prices
       features: Features
       consulting: Consulting
       howitworks: How it works
@@ -16,6 +17,28 @@
     footer:
       home: Home
       demo: Request for Demo
+
+    prices:
+      header: Prices
+      contact: Contact us
+
+      cloud:
+        header: Cloud-based
+        short_description: Best fit for mid-market companies and for quick start
+        price: € 0.02 / request
+        price_description: about € 1 / sport event
+        description: >
+          You can forget about technical stuff and enjoy service usage with no infrastructure issues in mind. 
+          We suggest this option because of its much smaller initial investment and less technical effort on your side.
+
+      enterprise:
+        header: Enterprise
+        short_description: For companies with sophisticated demands and need of the full control
+        price: Individual for client
+        price_description: depending on configuration
+        description: >
+          This option assumes our software will be installed on your own hardware, so you can have full control of it. 
+          Prices for this option depents on many factors, so, please, contact us for more information.
 
     contact:
       demo: Request for Demo
