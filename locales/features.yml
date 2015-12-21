@@ -5,28 +5,28 @@ en:
     list:
     - 
       title: Use well-known tools
-      img: features/tools2.jpg
+      img: features/tools.png
       description: >
         Microsoft Excel is a proven industry spreadsheet standard. It provides a mathematical toolkit in a straightforward format.
     -
       title: Just Plug and Play
-      img: features/tool3.jpg
+      img: features/pnp.png
       description: >
         It's easy to express your ideas in Excel files and upload them to <i>BetEngines</i>. We guarantee that they will work as you expect.
     -
       title: Ready for highload
-      img: features/storm2.jpg
+      img: features/highload.png
       description: >
         <i>BetEngines</i> is designed for high-throughput and high-speed requirements. 
         It accommodates massive simultaneous user interactions using modern cloud-based technologies.
     -
       title: With security in mind
-      img: features/security2.jpg
+      img: features/safe.png
       description: >
         Security is of the highest priority with BetEngines. <i>BetEngines</i> is designed to ensure user data security and integrity.
     -
       title: Reliable
-      img: features/reliable2.jpg
+      img: features/reliable.png
       description: >      
         <i>BetEngines</i> meets the high reliability demands of your business. 
         We have proven our durability and reliability in our partners' high-load production environments for the last two years.
@@ -37,30 +37,30 @@ ru:
     list:
     - 
       title: Используйте знакомые инструменты
-      img: features/tools1.jpg
+      img: features/tools.png
       description: >
         Microsoft Excel - это всем известный стандарт процессора электронных таблиц. 
         Excel содержит мощный и, в то же время, простой математический инструментарий.  
     -
       title: Подключайте ваши идеи
-      img: features/pnp.jpg
+      img: features/pnp.png
       description: >
         После описания Ваших идей в виде Excel файлов, загружайте их в <i>BetEngienes</i>. 
         Мы гарантируем - они будут работать в точности как на вашем компьютере. 
     -
       title: Готов к высоким нагрузкам
-      img: features/storm1.jpg
+      img: features/highload.png
       description: >
         <i>BetEngines</i> спроектирован согласно требований высокой пропускной способности и скорости работы. 
         Платформа способна выдерживать высокие нагрузки используя новейшие облачные технологии.
     -
       title: Безопасность
-      img: features/security1.jpg
+      img: features/safe.png
       description: >
         Безопасность в <i>BetEngines</i> стоит в наивысшем приоритете. 
         Мы спроектировали систему которая гарантирует безопасность и целостность данных клиентов. 
     -
       title: Надежность
-      img: features/reliable.jpg
+      img: features/reliable.png
       description: >      
         <i>BetEngines</i> доказывает свою надежность в условиях высоких нагрузок наших клиентов на протяжении 2-х лет.
