@@ -24,21 +24,21 @@
 
       cloud:
         header: Cloud-based
-        short_description: Best fit for mid-market companies and for quick start
+        short_description: Best fit for mid-market companies and for a quick start
         price: € 0.02 / request
         price_description: about € 1 / sport event
         description: >
-          You can forget about technical stuff and enjoy service usage with no infrastructure issues in mind. 
+          You can forget about technical stuff and enjoy our service with no infrastructure issues in mind.
           We suggest this option because of its much smaller initial investment and less technical effort on your side.
 
       enterprise:
         header: Enterprise
-        short_description: For companies with high demands and need of the full control
-        price: Individual for client
+        short_description: For companies with high demands and need for full control
+        price: "Price based on client's needs"
         price_description: depending on configuration
         description: >
           This option assumes our software will be installed on your own hardware, so you can have full control of it. 
-          Prices for this option depends on many factors, so, please, contact us for more information.
+          The price for this option depends on many factors. Please contact us for more information.
 
     contact:
       demo: Request for Demo
