@@ -33,12 +33,12 @@
 
       enterprise:
         header: Enterprise
-        short_description: For companies with sophisticated demands and need of the full control
+        short_description: For companies with high demands and need of the full control
         price: Individual for client
         price_description: depending on configuration
         description: >
           This option assumes our software will be installed on your own hardware, so you can have full control of it. 
-          Prices for this option depents on many factors, so, please, contact us for more information.
+          Prices for this option depends on many factors, so, please, contact us for more information.
 
     contact:
       demo: Request for Demo
