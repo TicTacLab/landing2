@@ -22,8 +22,8 @@
       header: Prices
       contact: Contact us
 
-      cloud:
-        header: Cloud-based
+      per_event:
+        header: Per-event
         short_description: Best fit for mid-market companies and for a quick start
         price: € 0.02 / request
         price_description: about € 1 / sport event
@@ -31,8 +31,8 @@
           You can forget about technical stuff and enjoy our service with no infrastructure issues in mind.
           We suggest this option because of its much smaller initial investment and less technical effort on your side.
 
-      enterprise:
-        header: Enterprise
+      in_house:
+        header: In-house
         short_description: For companies with high demands and need for full control
         price: "Price based on client's needs"
         price_description: depending on configuration
