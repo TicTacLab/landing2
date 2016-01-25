@@ -53,6 +53,10 @@ When interaction with BE on a particular event is finished, the client should re
 
 Any request may return **500 errors** if an internal error occurred. If service unavailable it will return error **503 "STU"**. All responses will have Content-Type: "application/json”. Response 204 has no body as specified by HTTP protocol.
 
+### Authentication
+
+Math engine uses Basic authentication. All requests must contain Authorization header with authentication credentials. If there is no Authorization header or credentials are invalid Math engine will return ***401 "UAR"** error.
+
 **Response structure**
 
 ~~~ json
