@@ -53,10 +53,6 @@ When interaction with BE on a particular event is finished, the client should re
 
 Any request may return **500 errors** if an internal error occurred. If service unavailable it will return error **503 "STU"**. All responses will have Content-Type: "application/json”. Response 204 has no body as specified by HTTP protocol.
 
-### Authentication
-
-Math engine uses Basic authentication. All requests must contain Authorization header with authentication credentials. If there is no Authorization header or credentials are invalid Math engine will return ***401 "UAR"** error.
-
 **Response structure**
 
 ~~~ json
@@ -81,6 +77,10 @@ Math engine uses Basic authentication. All requests must contain Authorization h
 }
 ~~~
 
+### Authentication
+
+Math engine uses Basic authentication. All requests must contain Authorization header with authentication credentials. If there is no Authorization header or credentials are invalid Math engine will return **401 "UAR"** error.
+
 ### Method: IN-PARAMS
 
 **GET /api/files/:file-id/:event-id/in-params**
@@ -101,7 +101,7 @@ Returns IN-params for a specified file. The combination of an event-id and file-
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/in-params
+curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/in-params
 ~~~
 
 **Response 200 data example**
@@ -201,7 +201,7 @@ Request body is a json object and should contain ALL file in-parameters for corr
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl -X POST -d <<json-request-body>> http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/calculate
+curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-request-body>> http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/calculate
 ~~~
 
 **Response 200 data example**
@@ -278,7 +278,7 @@ Deallocates computation resources for selected event.
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl --request DELETE http://math.engine/api/files/120/754fbcde-662c-4b3f-9f51-acb4e67913da
+curl --request DELETE --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine/api/files/120/754fbcde-662c-4b3f-9f51-acb4e67913da
 ~~~
 
 ## Your service is ready!
