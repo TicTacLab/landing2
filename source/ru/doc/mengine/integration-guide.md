@@ -78,6 +78,12 @@ title: MathEngine. Руководство по интеграции
 }
 ~~~
 
+
+
+### Аутентификация
+
+Math engine использует HTTP Basic аутентификацию. Все запросы должны содержать заголовок Authorization с аутентификационными данными. Если заголовок Authorization отсутствует или авторизационные данные не верны Math engine вернет ошибку **401 "UAR"**.
+
 ### Method: IN-PARAMS
 
 **GET /api/files/$file-id/$event-id/in-params**
@@ -99,7 +105,7 @@ title: MathEngine. Руководство по интеграции
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/in-params
+curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/in-params
 ~~~
 
 **Response 200 data example**
@@ -200,7 +206,7 @@ curl http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/in-params
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl -X POST -d <<json-request-body>> http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/calculate
+curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-request-body>> http://math.engine/api/files/120/72c361803a5b116e0682581fe958fdee/calculate
 ~~~
 
 **Response 200 data example**
@@ -277,7 +283,7 @@ curl -X POST -d <<json-request-body>> http://math.engine/api/files/120/72c361803
 **Request example** <a href="#curl">*<a/>
 
 ~~~
-curl --request DELETE http://math.engine/api/files/120/754fbcde-662c-4b3f-9f51-acb4e67913da
+curl --request DELETE --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine/api/files/120/754fbcde-662c-4b3f-9f51-acb4e67913da
 ~~~
 
 ## Ваш сервис готов!
