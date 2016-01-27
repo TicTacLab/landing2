@@ -50,6 +50,14 @@ title: MathEngine. Руководство по интеграции
 
 ## BetEngines REST API
 
+- [Введение](#api-general)
+- [Аутентификация](#api-auth)
+- [API](#api-in-params)
+  * [IN-PARAMS](#api-in-params)
+  * [CALCULATE](#api-calculate)
+  * [RELEASE](#api-releases)
+
+{:#api-general}
 ### Введение
 
 Любой запрос может вернуть ошибку **500 "ISE"** в случае внутренних ошибок системы. Если сервис не доступен возвращается ошибка **503 "STU"**. Все ответы BetEngines имеют Content-Type: "application/json". У ответа 204 нет содержимого, как в спецификации к протоколу HTTP.
@@ -79,11 +87,39 @@ title: MathEngine. Руководство по интеграции
 ~~~
 
 
-
+{:#api-auth}
 ### Аутентификация
 
-Math engine использует HTTP Basic аутентификацию. Все запросы должны содержать заголовок Authorization с аутентификационными данными. Если заголовок Authorization отсутствует или авторизационные данные не верны Math engine вернет ошибку **401 "UAR"**.
+Math Engine использует HTTP [Basic Аутентификацию](https://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA). Следуя описанию Basic Аутентификации, все запросы должны содержать заголовок Authorization с аутентификационными данными, например:
 
+<pre>
+GET /api/files/120/72c361803a5b116e0682581fe958fdee/in-params HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: math.engine
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+<b>Authorization: Basic <base64 encoded "login:password"></b>
+Connection: Keep-Alive
+</pre>
+
+Для логина "Aladdin" и пароля "open sesame" base64 форма "Aladdin:open sesame" будет "QWxhZGRpbjpvcGVuIHNlc2FtZQ==". Такой запрос будет иметь следующий вид:
+
+<pre>
+GET /api/files/120/72c361803a5b116e0682581fe958fdee/in-params HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: math.engine
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+<b>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</b>
+Connection: Keep-Alive
+</pre>
+
+
+Если заголовок Authorization отсутствует или авторизационные данные не верны Math Engine вернет ошибку **401 "UAR"** с WWW-Authenticate заголовком:
+
+    WWW-Authenticate: Basic realm="mengine"
+
+{:#api-in-params}
 ### Method: IN-PARAMS
 
 **GET /api/files/$file-id/$event-id/in-params**
@@ -160,6 +196,7 @@ curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine
 }
 ~~~
 
+{:#api-calculate}
 ### Method: CALCULATE
 
 **POST /api/files/$file-id/$event-id/calculate**
@@ -201,7 +238,7 @@ curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine
 * 400 "MFP" - неправильные параметры. 
 * 400 "SLE" - лимит сессий превышен.
 * 404 "FNF" - файл не найден.
-* 423 "CIP" - событие заблокированно предыдущим запросом. 
+* 423 "CIP" - событие занято обработкой предыдущим запросом.
 
 **Request example** <a href="#curl">*<a/>
 
@@ -263,6 +300,7 @@ curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-
 
 Тип возвращаемого значения, будет таким же как в Excel файле. 
 
+{:#api-release}
 ### Method: RELEASE
 
 **DELETE /api/files/$file-id/$event-id**
@@ -278,7 +316,7 @@ curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-
 
 * 204 - успешное освобождение ресурсов
 * 404 "ENF" - не найденно событие с указанным event-id
-* 423 "CIP" - событие заблокированно предыдущим расчетом
+* 423 "CIP" - событие занято обработкой предыдущим расчетом
 
 **Request example** <a href="#curl">*<a/>
 
