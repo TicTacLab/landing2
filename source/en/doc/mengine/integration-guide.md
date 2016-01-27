@@ -7,7 +7,7 @@ title: MathEngine. Integration Guide
 
 ## Introduction
 
-This document describes the steps needed to work with BetEngines REST API. This document assumes that you have already prepared your Excel file according to the [file preparation guide](/en/doc/mengine/file-preparation) and uploaded it using [AWI](/en/doc/user-guide).
+This document describes the steps needed to work with BetEngines REST API. This document assumes that you have already prepared your Excel file according to the [file preparation guide](/en/doc/mengine/file-preparation) and uploaded it using Admin Web Interface ([AWI](/en/doc/user-guide)).
 
 ## BetEngines REST API usage
 
@@ -49,6 +49,15 @@ When interaction with BE on a particular event is finished, the client should re
 
 ## BetEngines REST API
 
+- [General](#api-general)
+- [Authentication](#api-auth)
+- [API](#api-in-params)
+  * [IN-PARAMS](#api-in-params)
+  * [CALCULATE](#api-calculate)
+  * [RELEASE](#api-releases)
+
+
+{:#api-general}
 ### General
 
 Any request may return **500 errors** if an internal error occurred. If service unavailable it will return error **503 "STU"**. All responses will have Content-Type: "application/json”. Response 204 has no body as specified by HTTP protocol.
@@ -77,10 +86,40 @@ Any request may return **500 errors** if an internal error occurred. If service 
 }
 ~~~
 
+{:#api-auth}
 ### Authentication
 
-Math engine uses Basic authentication. All requests must contain Authorization header with authentication credentials. If there is no Authorization header or credentials are invalid Math engine will return **401 "UAR"** error.
+Math Engine uses [Basic Authentication](https://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA). According to the Basic Authentication, all requests MUST contain Authorization header with authentication credentials. For example:
 
+<pre>
+GET /api/files/120/72c361803a5b116e0682581fe958fdee/in-params HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: math.engine
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+<b>Authorization: Basic <base64 encoded "login:password"></b>
+Connection: Keep-Alive
+</pre>
+
+For login "Aladdin" and password "open sesame" base64 form of
+"Aladdin:open sesame" will be "QWxhZGRpbjpvcGVuIHNlc2FtZQ==". So request will looks like this:
+
+<pre>
+GET /api/files/120/72c361803a5b116e0682581fe958fdee/in-params HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: math.engine
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+<b>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</b>
+Connection: Keep-Alive
+</pre>
+
+If there is no Authorization header or credentials are invalid Math Engine will return **401 "UAR"** error with WWW-Authenticate header:
+
+    WWW-Authenticate: Basic realm="mengine"
+
+
+{:#api-in-params}
 ### Method: IN-PARAMS
 
 **GET /api/files/:file-id/:event-id/in-params**
@@ -156,6 +195,7 @@ curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine
 }
 ~~~
 
+{:#api-calculate}
 ### Method: CALCULATE
 
 **POST /api/files/:file-id/:event-id/calculate**
@@ -196,7 +236,7 @@ Request body is a json object and should contain ALL file in-parameters for corr
 * 400 "MFP" if parameters are invalid
 * 400 "SLE" if sessions limit exceeded
 * 404 "FNF" if file not found
-* 423 "CIP" if engine is busy, event is locked and computation in progress
+* 423 "CIP" if this event is doing calculation right now. Wait until that calculation is finishes.
 
 **Request example** <a href="#curl">*<a/>
 
@@ -258,6 +298,7 @@ Any field of outcome in a response may contain an error string message if an err
 
 The outcome fields will be of type as specified in excel file.
 
+{:#api-release}
 ### Method: RELEASE
 
 **DELETE /api/files/:file-id/:event-id**
@@ -273,7 +314,7 @@ Deallocates computation resources for selected event.
 
 * 204 if deallocation was successful
 * 404 "ENF" if event id is not found
-* 423 "CIP" if engine is busy, event is locked and computation is in progress
+* 423 "CIP" if there is a calculation with this event. Wait until it finishes.
 
 **Request example** <a href="#curl">*<a/>
 
