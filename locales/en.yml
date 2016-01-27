@@ -23,21 +23,20 @@
 
       per_event:
         header: Per event
-        short_description: Best fit for mid-market companies with lower demand
+        short_description: Pay only for what you use
         price: € 0.02 / request
-        price_description: approximately € 1 / sport event
+        price_description: Approximately € 1 per sport event
         description: >
-          With this option you pay for the service as you go.
-          This option requires a much smaller initial investment and less technical effort on your side.
+          Best option for smaller companies or companies with irregular data loads.
 
       per_month:
         header: Per month
-        short_description: For high demand and a large number of events
+        short_description: Save more than 30%
         price: € 2990 / month
-        price_description: Conducts approximately 4500 events per month
+        price_description: Conduct up to 4500 sport events per month
         description: >
-          You can forget about technical issues and enjoy our service with no infrastructure problems in mind.
-          If you need to conduct more events please contact us for other options.
+          Best option for larger companies with a stable data load.
+          Contact us for more information or for other pricing options.
 
     contact:
       demo: Request for Demo
