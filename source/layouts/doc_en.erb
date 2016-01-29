@@ -25,17 +25,33 @@
         </button>
         <a class="navbar-brand" href="/">BetEngines</a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <% data.doc.menu.en.each do |item| %>
-        <li class="<%= if item.url == current_page.url.chomp("/") then "active" end %>">
-          <a href="<%= item.url %>"><%= item.title %></a>
-        </li>
-        <% end %>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="pull-right" href="<%= current_page.url.sub! '/en/', '/ru/' %>">RU</a></li>
-      </ul>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <% data.doc.menu.en.each do |item| %>
+            <% if item.items %>
+            <li class="<%= if item.items.any? {|i| i[:url] == current_page.url.chomp("/")} then "dropdown active" else "dropdown" end %>">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><%= item.title %><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <% item.items.each do |subitem| %>
+              <li class="<%= if subitem.url == current_page.url.chomp("/") then "active" end %>">
+              <a href="<%= subitem.url %>"><%= subitem.title %></a>
+              </li>
+              <% end %>
+            </ul>
+            </li>
+            <% else %>
+            <li class="<%= if item.url == current_page.url.chomp("/") then "active" end %>">
+            <a href="<%= item.url %>"><%= item.title %></a>
+            </li>
+            <% end %>
+            <% end %>
+          </ul>
+          <% unless current_page.data.no_translation %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="pull-right" href="<%= current_page.url.sub! '/en/', '/ru/' %>">RU</a></li>
+          </ul>
+          <% end %>
+        </div>
       </div>
       </div> 
     </nav>    

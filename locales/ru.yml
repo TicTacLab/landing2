@@ -9,6 +9,8 @@
       howitworks: Как это работает?
       customers: Клиенты
       contacts: Контакты
+      doc: Документация
+      doc_link: /ru/doc/mengine/file-preparation
 
     language:
       title: EN
