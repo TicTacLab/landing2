@@ -22,19 +22,19 @@ On the Main panel you can find links to the [user management](#user-management) 
 
 <img src="/images/user-guide/files-eng.png" style="width: 1100px"/>
 
-After signing in to AWI you will find yourself on the "Files" page. This page is for managing of your files. The following functions are available on this page:
+After signing in to AWI you should see "Files" page. This page is for managing of your files. The following functions are available on this page:
 
-  * [New file uploading](#file-uploading)
-  * Uploaded files list
+  * Upload New File ([Read](#file-uploading))
+  * View Uploaded Files
   * For uploaded files:
-    * [File profiling](#file-profiling)
-    * File downloading
-    * [File updating](#file-updating)
-    * File removing
+    * Profile ([Read](#file-profiling))
+    * Download
+    * Update ([Read](#file-updating))
+    * Remove
+
 
 {:#file-uploading}
-### New file uploading
-
+### Upload New File
 <img src="/images/user-guide/upload-file-eng.png" style="width: 700px"/>
 
 The "Upload" page is for new file uploading.
@@ -42,20 +42,21 @@ In order to upload a new file, you should set:
  
   * **ID** - unique identifier of the new file. This is required integer field.
   * **File** - file to upload. This is required field.
+  * **Description** - optional description of the file.
 
 The file will be uploaded after you click the "Submit" button.
 
 <div class="well well-sm">
-<b>Note!</b> Before you upload your file, you should make a few simple adjustments to it as described in the <a href="/en/doc/mengine/file-preparation/">manual</a>.
+<b>Note!</b> Before you upload your file, you need to make a few simple adjustments to it as described in the <a href="/en/doc/mengine/file-preparation/">Excel File Preparation Guide</a>.
 </div>
 
 {:#file-profiling}
-### File profiling
+### Profile
 
 <img src="/images/user-guide/profile-eng.png"/>
 
 <div class="well well-sm">
-<b>Note!</b> This feature is for file performance checking. For production usage, you should use <a href="/en/doc/mengine/integration-guide/">MathEngine REST API</a>.
+<b>Note!</b> This feature is for file performance checking. For production usage use <a href="/en/doc/mengine/integration-guide/">MathEngine REST API</a>.
 </div>
 
 Using the "Profile" page you can set input parameters for the file manually and check the output value from it.
@@ -70,7 +71,7 @@ Using the "Options" button you can export and import IN parameters to/from json 
 <img src="/images/user-guide/profile-options.png" />
 
 {:#file-updating}
-### File updating
+### Update
 
 <img src="/images/user-guide/replace.png" width="700px"/>
 

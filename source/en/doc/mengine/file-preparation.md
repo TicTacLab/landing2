@@ -6,15 +6,15 @@ title: MathEngine. File preparation.
 
 # Excel file preparation
 
-In order to upload an Excel file to the Engine you should create IN and OUT sheets. These sheets are needed for Engine inter-operation with your file.
+In order to upload an Excel file to the Engine you MUST create IN and OUT sheets. These sheets are used for communication between Engine and your file.
 
 <div class="well well-sm">
-<b>Note!</b> All used cells in the "IN" and "OUT" sheets must have values. Cells that are not used should be cleared. You can clear cells by clicking Home Tab -> Editing Section -> Clear -> Clear All (Alt+H+E+A).
+<b>Note!</b> All used cells in the "IN" and "OUT" sheets MUST have values. Cells that are not used MUST be cleared. You can clear cells by clicking Home Tab -> Editing Section -> Clear -> Clear All (Alt+H+E+A).
 </div>
 
 ## "IN" sheet preparation
 
-*IN* sheet is the entry point of your file for the Engine. This sheet should contain all input parameters that your file should accept for calculation results and that your file depends on.
+*IN* sheet is the entry point of your file for the Engine. This sheet contains all input parameters that your file accepts for calculation results and that your file depends on.
 
 Typical *IN* parameters are:
 
@@ -40,11 +40,11 @@ Usually this value is the serial number of the parameter.
 The "OUT" sheet contains the Excel file calculation result.
 The content of this sheet will be returned by [MathEngine REST API](/en/doc/mengine/integration-guide/) as is.
 
-**"OUT" sheet references should point <u>FROM</u> all data that you want to get from the file.**
+**"OUT" sheet references MUST point <u>FROM</u> all data that you want to get from the file.**
 
 Typical *OUT* values are:
 
-* Coefficients
+* Odds
 * Markets parameters
 * Outcome parameters
 * etc.
