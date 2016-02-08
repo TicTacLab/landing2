@@ -6,7 +6,7 @@ title: MathEngine. File preparation.
 
 # Excel file preparation
 
-In order to upload an Excel file to the engine you should create IN and OUT sheets. These sheets are needed for engine inter-operation with your file.
+In order to upload an Excel file to the Engine you should create IN and OUT sheets. These sheets are needed for Engine inter-operation with your file.
 
 <div class="well well-sm">
 <b>Note!</b> All used cells in the "IN" and "OUT" sheets must have values. Cells that are not used should be cleared. You can clear cells by clicking Home Tab -> Editing Section -> Clear -> Clear All (Alt+H+E+A).
@@ -14,9 +14,7 @@ In order to upload an Excel file to the engine you should create IN and OUT shee
 
 ## "IN" sheet preparation
 
-*IN* sheet is the entry point of your file for the engine. This sheet should contain all input parameters that your model will accept for calculation.
-
-**References from the "value" column from the "IN" sheet should point <u>TO</u> the input parameters of your Excel file.**
+*IN* sheet is the entry point of your file for the Engine. This sheet should contain all input parameters that your file should accept for calculation results and that your file depends on.
 
 Typical *IN* parameters are:
 
@@ -27,12 +25,11 @@ Typical *IN* parameters are:
 * Scores expectancy
 * etc
 
-This sheet should contain at least two *required* columns: **id** and **value**.
+This sheet MUST contain at least two *required* columns: **id** and **value**.
 
-The **id** column should contain a unique parameter identifier. This parameter should be a number. 
+* **id** column MUST contain a unique parameter identifier. This parameter MUST be a number. 
 Usually this value is the serial number of the parameter.
-
-The **value** column is an appropriate value of each parameter. There are no restrictions on column values types.
+* **value** column is an appropriate value of each parameter. There are no restrictions on column values types.
 
 ### "IN" sheet example
 
