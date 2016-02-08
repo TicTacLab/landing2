@@ -238,7 +238,7 @@ curl --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" http://math.engine
 * 400 "MFP" - неправильные параметры. 
 * 400 "SLE" - лимит сессий превышен.
 * 404 "FNF" - файл не найден.
-* 423 "CIP" - событие занято обработкой предыдущим запросом.
+* 423 "CIP" - событие занято обработкой предыдущего запроса.
 
 **Request example** <a href="#curl">*<a/>
 
@@ -316,7 +316,7 @@ curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-
 
 * 204 - успешное освобождение ресурсов
 * 404 "ENF" - не найденно событие с указанным event-id
-* 423 "CIP" - событие занято обработкой предыдущим расчетом
+* 423 "CIP" - событие занято обработкой предыдущего расчета
 
 **Request example** <a href="#curl">*<a/>
 
