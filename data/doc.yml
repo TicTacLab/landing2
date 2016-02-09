@@ -4,16 +4,16 @@ menu:
       items:
         - title: MathEngine
           url: /en/doc/mengine/file-preparation
-        #- title: SettlementEngine
-        #  url: /en/doc/sengine/file-preparation
+        - title: SettlementEngine
+          url: /en/doc/sengine/file-preparation
     - title: User Guide
       url: /en/doc/user-guide
     - title: Integration Guide
       items:
         - title: MathEngine
           url: /en/doc/mengine/integration-guide
-        #- title: SettlementEngine
-        #  url: /en/doc/sengine/integration-guide
+        - title: SettlementEngine
+          url: /en/doc/sengine/integration-guide
     - title: Supported Functions
       url: /en/doc/supported-functions
 
@@ -22,16 +22,16 @@ menu:
       items: 
         - title: MathEngine 
           url: /ru/doc/mengine/file-preparation
-        #- title: SettlementEngine
-        #  url: /ru/doc/sengine/file-preparation
+        - title: SettlementEngine
+          url: /ru/doc/sengine/file-preparation
     - title: Административный интерфейс
       url: /ru/doc/user-guide
     - title: Руководство по интеграции
       items:
         - title: MathEngine
           url: /ru/doc/mengine/integration-guide
-        #- title: SettlementEngine
-        #  url: /ru/doc/sengine/integration-guide
+        - title: SettlementEngine
+          url: /ru/doc/sengine/integration-guide
     - title: Поддерживаемые функции
       url: /ru/doc/supported-functions
 
