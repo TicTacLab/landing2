@@ -59,7 +59,7 @@ title: MathEngine. Подготовка файла
 ![OUT](/images/out-page.png)
 
 
-## Следущие шаги
+## Следующие шаги
 
 Теперь Вы можете приступать к генерации сервисов с помощью [MathEngine Administration Interface](/ru/doc/user-guide/).
 

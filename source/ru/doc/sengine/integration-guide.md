@@ -345,7 +345,7 @@ curl http://settlement.engine/events/550e8400-e29b-41d4-a716-446655440000/event-
 
 <blockquote class="blockquote-reverse">
   <p>Мы много работаем над улучшением нашего сервиса, и всегда будем рады любому отзыву о его работе.</p>
-  <footer>С уважением, комманда BetEngines</footer>
+  <footer>С уважением, команда BetEngines</footer>
 </blockquote>
 
 <hr />

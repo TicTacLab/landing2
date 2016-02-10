@@ -48,7 +48,7 @@ This sheet is mandatory for validating Events that are passed into the system.
 
 First column must contain values from column *Market_type_name* from *OUT* sheet. Other columns are filled out by names of Event Types from *EventType* sheet.
 
-Cell values at the crossing are the *Atrributes* that required for settling this bet.
+Cell values at the crossing are the *Attributes* that required for settling this bet.
 
 
 ### Example of *MarketTemplates* sheet
@@ -67,5 +67,5 @@ This sheet must contain result of settling of outcomes. *Market_type_name* is re
 [BetEngines Administration Interface](/ru/doc/user-guide/)
 
 <div class="well well-sm">
-<b>Warnning!</b> *OUT*, *MarketTemplates*, *EventLog*, *EventType* must not contain empty cells. All cells must have a value. To definitely clear unused cells use Clear -> Clear All button.
+<b>Warning!</b> *OUT*, *MarketTemplates*, *EventLog*, *EventType* must not contain empty cells. All cells must have a value. To definitely clear unused cells use Clear -> Clear All button.
 </div>

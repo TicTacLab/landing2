@@ -14,7 +14,7 @@ This document describes the steps needed to work with BetEngines REST API. This 
 BetEngines usage consists of several steps:
 
 1. [Creating an event](#event-creation) with a unique *event-id*
-2. [Filling out an "IN" sheet](#in-fill-in) and sending it to the service. Gettiing values from the "OUT" sheet. Repeating this step until the event is finished.
+2. [Filling out an "IN" sheet](#in-fill-in) and sending it to the service. Getting values from the "OUT" sheet. Repeating this step until the event is finished.
 3. [Releasing resources](#release-resources) after the event is finished
 
 Let’s talk about each step in detail.
@@ -284,7 +284,7 @@ curl -X POST --header "Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l" -d <<json-
 
 ### Cell errors
 
-Any field of outcome in a response may contain an error string message if an error occured during calculation. Per cell errors are not considered as a response error, only as per cell fail, so response with cell errors will be 200 OK.
+Any field of outcome in a response may contain an error string message if an error occurred during calculation. Per cell errors are not considered as a response error, only as per cell fail, so response with cell errors will be 200 OK.
 
 #### Possible cell errors:
 

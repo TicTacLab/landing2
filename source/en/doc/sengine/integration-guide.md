@@ -14,7 +14,7 @@ title: SettlementEngine. Руководство по интеграции Settle
 Использование SettlementEngine REST API состоит из нескольких шагов:
 
 1. [Создание события](#event-create)
-2. [Заполнение журанала события](#log-fill-in)
+2. [Заполнение журнала события](#log-fill-in)
 3. [Освобождение ресурсов](#release)
 
 {:#event-create}
@@ -30,7 +30,7 @@ title: SettlementEngine. Руководство по интеграции Settle
 {:#log-fill-in}
 ### Заполнение журнала события
 
-Для расчета маркетов SettlementEngine опирается на журнал события. Заполнение журнала события просиходит с помощью методов *APPEND-EVENT-LOG* и *SET-EVENT-LOG* эти методы возвращают маркеты расчитаные на основе нового журнала события.
+Для расчета маркетов SettlementEngine опирается на журнал события. Заполнение журнала события происходит с помощью методов *APPEND-EVENT-LOG* и *SET-EVENT-LOG* эти методы возвращают маркеты рассчитаны на основе нового журнала события.
 
 Подробно о подготовке файла для расчета маркетов описано в [Руководстве](/ru/sengine/file-preparation/).
 
@@ -38,7 +38,7 @@ title: SettlementEngine. Руководство по интеграции Settle
 
 {:#release}
 ### Освобождение ресурсов
-После окончания события следует освободить вычеслительные ресурсы вызвав метод *FINALIZE-EVENT*.
+После окончания события следует освободить вычислительные ресурсы вызвав метод *FINALIZE-EVENT*.
 
 ## SettlementEngine REST API
 
@@ -183,7 +183,7 @@ curl http://settlement.engine/events/550e8400-e29b-41d4-a716-446655440000/settle
 
 **GET /events/:event-id/event-log**
 
-Возваращает полный журнал события.
+Возвращает полный журнал события.
 
 **Parameters**
 
@@ -219,7 +219,7 @@ curl http://settlement.engine/events/550e8400-e29b-41d4-a716-446655440000/event-
 
 **POST /events/:event-id/event-log/append**
 
-Добавляет записти в конец журнала события.
+Добавляет записи в конец журнала события.
 
 **Parameters**
 
@@ -337,7 +337,7 @@ curl http://settlement.engine/events/550e8400-e29b-41d4-a716-446655440000/event-
 
 <blockquote class="blockquote-reverse">
   <p>Мы много работаем над улучшением нашего сервиса, и всегда будем рады любому отзыву о его работе.</p>
-  <footer>С уважением, комманда BetEngines</footer>
+  <footer>С уважением, команда BetEngines</footer>
 </blockquote>
 
 <hr />
