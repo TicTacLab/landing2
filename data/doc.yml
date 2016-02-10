@@ -9,11 +9,7 @@ menu:
     - title: User Guide
       url: /en/doc/user-guide
     - title: Integration Guide
-      items:
-        - title: MathEngine
-          url: /en/doc/mengine/integration-guide
-        - title: SettlementEngine
-          url: /en/doc/sengine/integration-guide
+      url: /en/doc/mengine/integration-guide
     - title: Supported Functions
       url: /en/doc/supported-functions
 
